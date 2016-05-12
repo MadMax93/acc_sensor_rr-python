@@ -2,11 +2,11 @@ __author__ = 'Maximilian Kurscheidt @MadMax93'
 
 import os
 
-from importcsv import ImportCsv
-from processing import Signalprocessing
-from visualization import Visualization
-import numpy as np
 import matplotlib.pyplot as plt
+
+from Code import ImportCsv
+from Code import Signalprocessing
+from Code import Visualization
 
 SAMPLE_RATE = 50
 LOW_CUT = 0.2  # @todo Find suitable filter criteria
@@ -24,22 +24,11 @@ class Main(object):
         '''Import csv file'''
         directory = os.path.dirname(__file__)
 
-        filename = os.path.join(directory, '../files/OLD/michelle.csv')
-
-        #filename = os.path.join(directory, '../files/Rubel2_2016-04-23.csv')
-        #filename = os.path.join(directory, '../files/Rubel3_2016-04-23.csv')
-        #filename = os.path.join(directory, '../files/Tsubasa4_2016-04-23.csv')
-
-        #filename = os.path.join(directory, '../files/Usman_2016-05-05_1.csv')
-        #filename = os.path.join(directory, '../files/Usman_2016-05-05_2.csv')
-        #filename = os.path.join(directory, '../files/Usman_2016-05-05_3.csv')
+        filename = os.path.join(directory, '../files/case1.csv')
 
         import_csv = ImportCsv.ImportCsv(filename)
         raw_data_array = import_csv.import_csv()
 
-        #visualization = Visualization.Visualization()
-
-        #signalprocessing = Signalprocessing.Signalprocessing()
         #visualization.visualise_raw_data_combined(raw_data_array)
 
         '''Split up import data'''
