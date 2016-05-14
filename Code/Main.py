@@ -9,7 +9,7 @@ from Code import Signalprocessing
 from Code import Visualization
 
 SAMPLE_RATE = 50
-LOW_CUT = 0.2  # @todo Find suitable filter criteria
+LOW_CUT = 0.2
 HIGH_CUT = 0.45
 
 

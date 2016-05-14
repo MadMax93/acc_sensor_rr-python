@@ -1,13 +1,10 @@
 __author__ = 'Maximilian Kurscheidt @MadMax93'
 
-import math
-
 import numpy as np
-import scipy.signal as signal
-import matplotlib.pyplot as plt
 import peakutils
-from peakutils.plot import plot as pplot
-from scipy.fftpack import fft, rfft, fftshift
+import scipy.signal as signal
+from scipy.fftpack import fft
+
 
 class Signalprocessing(object):
     def butter_bandpass_design(self, low_cut, high_cut, sample_rate, order=4):
@@ -112,7 +109,6 @@ class Signalprocessing(object):
         :param xf_max: ndarray - frequency parts in an equally interval
         :return: peak: ndarray - a pair of power and frequency
         """
-        # @todo if more than one maximum find biggest one - check for none
 
         indexes = peakutils.indexes(power_max, thres=0.9, min_dist=30)
         peak = np.hstack((xf_max[indexes], power_max[indexes]))
