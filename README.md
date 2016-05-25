@@ -2,7 +2,7 @@
 Python implementation for extracting the respiration rate from three-dimentional-sensor data. It provides methods for plotting the results through Matplotlib. This programm got developed for my bachelor thesis.
 The used digital signal processing algorithms are the following:
 * Butterworth bandpass filter
-  * Default: order = 4, low cutoff frequency = 0.2Hz, High cutoff frequency = 0.4Hz
+  * Default: order = 4, low cutoff frequency = 0.2Hz, High cutoff frequency = 0.45Hz
 * Fast Fourier Transformation
 * Peakdetektion
 * Calculation of the respiration rate
